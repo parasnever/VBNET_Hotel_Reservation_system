@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VBNET_Hotel_Reservation_system", "VBNET_Hotel_Reservation_system\VBNET_Hotel_Reservation_system.vbproj", "{A39C9DE6-EB6D-4B10-8832-409C7D4F458D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A39C9DE6-EB6D-4B10-8832-409C7D4F458D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39C9DE6-EB6D-4B10-8832-409C7D4F458D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39C9DE6-EB6D-4B10-8832-409C7D4F458D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39C9DE6-EB6D-4B10-8832-409C7D4F458D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13BCD7E0-03BC-4CBD-86AC-FE59C8E7C46B}
+	EndGlobalSection
+EndGlobal
