@@ -202,6 +202,7 @@ Partial Class ManageclientsForm
         TextBoxId.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBoxId.Location = New Point(167, 175)
         TextBoxId.Name = "TextBoxId"
+        TextBoxId.ReadOnly = True
         TextBoxId.Size = New Size(385, 34)
         TextBoxId.TabIndex = 2
         ' 

@@ -50,9 +50,28 @@ Public Class CLIENT
     End Function
 
     'create a function to remove the selected client
-    Function removeClient() As Boolean
-        Return True
+    Function removeClient(ByVal cid As Integer) As Boolean
+
+        Dim command As New MySqlCommand("DELETE FROM `clients` WHERE `id`=@cid", connection.getConnection())
+
+        command.Parameters.Add("@cid", MySqlDbType.Int32).Value = cid
+
+        connection.openConnection()
+
+        If command.ExecuteNonQuery() > 0 Then
+            connection.closeConnection()
+            Return True
+
+        Else
+            connection.closeConnection()
+            Return False
+        End If
+
+
+
+
     End Function
+
 
     'create a function to get a list of all clients
     Function getAllClients() As DataTable
