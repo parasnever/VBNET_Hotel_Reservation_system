@@ -23,7 +23,7 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Button1 = New Button()
+        ButtonLogin = New Button()
         TextBoxPassword = New TextBox()
         Label3 = New Label()
         TextBoxUsername = New TextBox()
@@ -37,7 +37,7 @@ Partial Class LoginForm
         ' Panel1
         ' 
         Panel1.BackColor = Color.Gray
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(ButtonLogin)
         Panel1.Controls.Add(TextBoxPassword)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(TextBoxUsername)
@@ -49,19 +49,19 @@ Partial Class LoginForm
         Panel1.Size = New Size(800, 450)
         Panel1.TabIndex = 0
         ' 
-        ' Button1
+        ' ButtonLogin
         ' 
-        Button1.BackColor = Color.LimeGreen
-        Button1.Cursor = Cursors.Hand
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(46, 313)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(728, 73)
-        Button1.TabIndex = 5
-        Button1.Text = "Login"
-        Button1.UseVisualStyleBackColor = False
+        ButtonLogin.BackColor = Color.LimeGreen
+        ButtonLogin.Cursor = Cursors.Hand
+        ButtonLogin.FlatStyle = FlatStyle.Flat
+        ButtonLogin.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ButtonLogin.ForeColor = Color.White
+        ButtonLogin.Location = New Point(46, 313)
+        ButtonLogin.Name = "ButtonLogin"
+        ButtonLogin.Size = New Size(728, 73)
+        ButtonLogin.TabIndex = 5
+        ButtonLogin.Text = "Login"
+        ButtonLogin.UseVisualStyleBackColor = False
         ' 
         ' TextBoxPassword
         ' 
@@ -70,6 +70,8 @@ Partial Class LoginForm
         TextBoxPassword.Name = "TextBoxPassword"
         TextBoxPassword.Size = New Size(602, 34)
         TextBoxPassword.TabIndex = 4
+        TextBoxPassword.Text = "1paras"
+        TextBoxPassword.UseSystemPasswordChar = True
         ' 
         ' Label3
         ' 
@@ -88,6 +90,7 @@ Partial Class LoginForm
         TextBoxUsername.Name = "TextBoxUsername"
         TextBoxUsername.Size = New Size(602, 34)
         TextBoxUsername.TabIndex = 2
+        TextBoxUsername.Text = "1paras"
         ' 
         ' Label2
         ' 
@@ -127,8 +130,10 @@ Partial Class LoginForm
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        MaximizeBox = False
         Name = "LoginForm"
-        Text = "LoginForm"
+        StartPosition = FormStartPosition.CenterScreen
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
@@ -139,7 +144,7 @@ Partial Class LoginForm
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonLogin As Button
     Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBoxUsername As TextBox
