@@ -219,9 +219,9 @@ Partial Class ManageclientsForm
         ' Panel2
         ' 
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(3, 3)
+        Panel2.Location = New Point(2, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1229, 144)
+        Panel2.Size = New Size(1229, 147)
         Panel2.TabIndex = 0
         ' 
         ' Label1
@@ -232,7 +232,7 @@ Partial Class ManageclientsForm
         Label1.ForeColor = Color.White
         Label1.Location = New Point(0, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(1229, 144)
+        Label1.Size = New Size(1229, 147)
         Label1.TabIndex = 0
         Label1.Text = "Manage Clients"
         Label1.TextAlign = ContentAlignment.MiddleCenter

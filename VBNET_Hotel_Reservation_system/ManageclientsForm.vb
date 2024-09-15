@@ -65,6 +65,13 @@ Public Class ManageclientsForm
             If client.removeClient(id) Then
                 MessageBox.Show("Client Deleted Successfully", "Delete client", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 DataGridView1.DataSource = client.getAllClients()
+
+                ' clear boxes
+                TextBoxId.Text = ""
+                TextBoxFname.Text = ""
+                TextBoxPhone.Text = ""
+                TextBoxEmail.Text = ""
+
             Else
                 MessageBox.Show("Client Not Deleted", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
@@ -77,6 +84,10 @@ Public Class ManageclientsForm
         TextBoxLname.Text = DataGridView1.CurrentRow.Cells(2).Value.ToString()
         TextBoxPhone.Text = DataGridView1.CurrentRow.Cells(3).Value.ToString()
         TextBoxEmail.Text = DataGridView1.CurrentRow.Cells(4).Value.ToString()
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class
