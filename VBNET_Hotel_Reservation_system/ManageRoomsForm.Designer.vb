@@ -23,6 +23,9 @@ Partial Class ManageRoomsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        RadioButtonNo = New RadioButton()
+        RadioButtonYes = New RadioButton()
+        ComboBoxType = New ComboBox()
         DataGridView1 = New DataGridView()
         ButtonEdit = New Button()
         ButtonRemove = New Button()
@@ -35,9 +38,6 @@ Partial Class ManageRoomsForm
         Label2 = New Label()
         Panel2 = New Panel()
         Label1 = New Label()
-        ComboBoxType = New ComboBox()
-        RadioButton1 = New RadioButton()
-        RadioButton2 = New RadioButton()
         Panel1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -46,8 +46,8 @@ Partial Class ManageRoomsForm
         ' Panel1
         ' 
         Panel1.BackColor = Color.DimGray
-        Panel1.Controls.Add(RadioButton2)
-        Panel1.Controls.Add(RadioButton1)
+        Panel1.Controls.Add(RadioButtonNo)
+        Panel1.Controls.Add(RadioButtonYes)
         Panel1.Controls.Add(ComboBoxType)
         Panel1.Controls.Add(DataGridView1)
         Panel1.Controls.Add(ButtonEdit)
@@ -65,6 +65,46 @@ Partial Class ManageRoomsForm
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1337, 700)
         Panel1.TabIndex = 2
+        ' 
+        ' RadioButtonNo
+        ' 
+        RadioButtonNo.AutoSize = True
+        RadioButtonNo.BackColor = Color.White
+        RadioButtonNo.FlatStyle = FlatStyle.Flat
+        RadioButtonNo.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButtonNo.ForeColor = Color.Red
+        RadioButtonNo.Location = New Point(274, 356)
+        RadioButtonNo.Name = "RadioButtonNo"
+        RadioButtonNo.Size = New Size(65, 33)
+        RadioButtonNo.TabIndex = 19
+        RadioButtonNo.Text = "No"
+        RadioButtonNo.UseVisualStyleBackColor = False
+        ' 
+        ' RadioButtonYes
+        ' 
+        RadioButtonYes.AutoSize = True
+        RadioButtonYes.BackColor = Color.White
+        RadioButtonYes.Checked = True
+        RadioButtonYes.FlatStyle = FlatStyle.Flat
+        RadioButtonYes.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButtonYes.ForeColor = Color.Green
+        RadioButtonYes.Location = New Point(167, 356)
+        RadioButtonYes.Name = "RadioButtonYes"
+        RadioButtonYes.Size = New Size(75, 33)
+        RadioButtonYes.TabIndex = 18
+        RadioButtonYes.TabStop = True
+        RadioButtonYes.Text = "Yes"
+        RadioButtonYes.UseVisualStyleBackColor = False
+        ' 
+        ' ComboBoxType
+        ' 
+        ComboBoxType.DropDownStyle = ComboBoxStyle.DropDownList
+        ComboBoxType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ComboBoxType.FormattingEnabled = True
+        ComboBoxType.Location = New Point(167, 236)
+        ComboBoxType.Name = "ComboBoxType"
+        ComboBoxType.Size = New Size(385, 37)
+        ComboBoxType.TabIndex = 17
         ' 
         ' DataGridView1
         ' 
@@ -166,7 +206,6 @@ Partial Class ManageRoomsForm
         TextBoxNumber.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBoxNumber.Location = New Point(167, 175)
         TextBoxNumber.Name = "TextBoxNumber"
-        TextBoxNumber.ReadOnly = True
         TextBoxNumber.Size = New Size(385, 34)
         TextBoxNumber.TabIndex = 2
         ' 
@@ -201,46 +240,6 @@ Partial Class ManageRoomsForm
         Label1.Text = "Manage Rooms"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ComboBoxType
-        ' 
-        ComboBoxType.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBoxType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBoxType.FormattingEnabled = True
-        ComboBoxType.Location = New Point(167, 236)
-        ComboBoxType.Name = "ComboBoxType"
-        ComboBoxType.Size = New Size(385, 37)
-        ComboBoxType.TabIndex = 17
-        ' 
-        ' RadioButton1
-        ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.BackColor = Color.White
-        RadioButton1.FlatStyle = FlatStyle.Flat
-        RadioButton1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton1.ForeColor = Color.Green
-        RadioButton1.Location = New Point(167, 356)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(75, 33)
-        RadioButton1.TabIndex = 18
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "Yes"
-        RadioButton1.UseVisualStyleBackColor = False
-        ' 
-        ' RadioButton2
-        ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.BackColor = Color.White
-        RadioButton2.FlatStyle = FlatStyle.Flat
-        RadioButton2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton2.ForeColor = Color.Red
-        RadioButton2.Location = New Point(274, 356)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(65, 33)
-        RadioButton2.TabIndex = 19
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "No"
-        RadioButton2.UseVisualStyleBackColor = False
-        ' 
         ' ManageRoomsForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -271,6 +270,6 @@ Partial Class ManageRoomsForm
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBoxType As ComboBox
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButtonYes As RadioButton
+    Friend WithEvents RadioButtonNo As RadioButton
 End Class
