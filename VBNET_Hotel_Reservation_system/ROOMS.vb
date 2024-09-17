@@ -1,4 +1,5 @@
 ﻿
+Imports System.Runtime.InteropServices.JavaScript.JSType
 Imports MySql.Data.MySqlClient
 
 
@@ -23,6 +24,7 @@ Public Class ROOMS
         Return table
     End Function
     ' create a Function To Get a list Of all rooms
+    'and we can use this form to get the rooms count
     Function getAllRooms() As DataTable
 
         Dim adapter As New MySqlDataAdapter()
@@ -84,5 +86,23 @@ Public Class ROOMS
 
 
     End Function
+
+    ' create a function to delete the selected room
+    Function removeRoom(ByVal roomNumber As Integer) As Boolean
+        Dim command As New MySqlCommand("DELETE FROM `rooms` WHERE `number`=@num", connection.getConnection())
+        '@num
+        command.Parameters.Add("@num", MySqlDbType.Int32).Value = roomNumber
+        connection.openConnection()
+        If command.ExecuteNonQuery() > 0 Then
+            connection.closeConnection()
+            Return True
+
+        Else
+            connection.closeConnection()
+            Return False
+        End If
+    End Function
+
+
 
 End Class

@@ -23,6 +23,8 @@ Partial Class ManageRoomsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Panel3 = New Panel()
+        LabelRoomsCount = New Label()
         RadioButtonNo = New RadioButton()
         RadioButtonYes = New RadioButton()
         ComboBoxType = New ComboBox()
@@ -39,6 +41,7 @@ Partial Class ManageRoomsForm
         Panel2 = New Panel()
         Label1 = New Label()
         Panel1.SuspendLayout()
+        Panel3.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         SuspendLayout()
@@ -46,6 +49,7 @@ Partial Class ManageRoomsForm
         ' Panel1
         ' 
         Panel1.BackColor = Color.DimGray
+        Panel1.Controls.Add(Panel3)
         Panel1.Controls.Add(RadioButtonNo)
         Panel1.Controls.Add(RadioButtonYes)
         Panel1.Controls.Add(ComboBoxType)
@@ -65,6 +69,27 @@ Partial Class ManageRoomsForm
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1337, 700)
         Panel1.TabIndex = 2
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.Black
+        Panel3.Controls.Add(LabelRoomsCount)
+        Panel3.Location = New Point(621, 612)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(703, 78)
+        Panel3.TabIndex = 20
+        ' 
+        ' LabelRoomsCount
+        ' 
+        LabelRoomsCount.Dock = DockStyle.Fill
+        LabelRoomsCount.Font = New Font("Microsoft Sans Serif", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LabelRoomsCount.ForeColor = Color.White
+        LabelRoomsCount.Location = New Point(0, 0)
+        LabelRoomsCount.Name = "LabelRoomsCount"
+        LabelRoomsCount.Size = New Size(703, 78)
+        LabelRoomsCount.TabIndex = 0
+        LabelRoomsCount.Text = "100 Room"
+        LabelRoomsCount.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' RadioButtonNo
         ' 
@@ -118,7 +143,7 @@ Partial Class ManageRoomsForm
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(704, 503)
+        DataGridView1.Size = New Size(704, 431)
         DataGridView1.TabIndex = 16
         ' 
         ' ButtonEdit
@@ -229,7 +254,7 @@ Partial Class ManageRoomsForm
         ' 
         ' Label1
         ' 
-        Label1.BackColor = Color.Gold
+        Label1.BackColor = Color.Goldenrod
         Label1.Dock = DockStyle.Fill
         Label1.Font = New Font("Microsoft Sans Serif", 43.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
@@ -251,6 +276,7 @@ Partial Class ManageRoomsForm
         Text = "ManageRoomsForm"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel3.ResumeLayout(False)
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         ResumeLayout(False)
@@ -272,4 +298,6 @@ Partial Class ManageRoomsForm
     Friend WithEvents ComboBoxType As ComboBox
     Friend WithEvents RadioButtonYes As RadioButton
     Friend WithEvents RadioButtonNo As RadioButton
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents LabelRoomsCount As Label
 End Class
